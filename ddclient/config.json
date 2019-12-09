@@ -1,0 +1,24 @@
+{
+  "name": "ddclient",
+  "version": "0.1",
+  "slug": "ddclient",
+  "description": "",
+  "arch": ["armhf"],
+  "startup": "application",
+  "boot": "auto",
+  "options": {
+    "hosts": [
+      {
+        "protocol": "dyndns2",
+        "login": "mylogin",
+        "password": "mypassword",
+        "host": "myhost.dyndns.org"
+      }
+    ]
+  },
+  "schema": {
+    "hosts": [
+      { "protocol": "str", "login": "str", "password": "str", "host": "str" }
+    ]
+  }
+}
