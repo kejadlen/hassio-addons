@@ -5,6 +5,8 @@ CONFIG_PATH=/data/options.json
 DDCLIENT_CONF_PATH=/etc/ddclient/ddclient.conf
 
 printf "daemon=300\n\n" > $DDCLIENT_CONF_PATH
+printf "use=web\n" >> $DDCLIENT_CONF_PATH
+printf "ssl=yes\n\n" >> $DDCLIENT_CONF_PATH
 
 for host in $(jq --compact-output ".hosts[]" $CONFIG_PATH); do
   printf "protocol=$(echo ${host} | jq --raw-output .protocol), " >> $DDCLIENT_CONF_PATH

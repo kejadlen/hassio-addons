@@ -1,6 +1,6 @@
 {
   "name": "ddclient",
-  "version": "0.3",
+  "version": "0.4",
   "slug": "ddclient",
   "description": "",
   "arch": ["armhf"],
