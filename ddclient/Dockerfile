@@ -9,7 +9,8 @@ RUN apk update && apk upgrade && \
         curl \
         make \
         perl \
-        perl-io-socket-ssl
+        perl-io-socket-ssl \
+        perl-utils
 RUN cpan install Test::Requires && cpan Data::Validate::IP
 
 RUN cd tmp && \
