@@ -16,7 +16,7 @@ cat <<-EOF > $TRAEFIK_DYNAMIC_CONF_PATH
 [http.services]
   [http.services.traefik.loadBalancer]
     [[http.services.traefik.loadBalancer.servers]]
-      url = "http://traefik:8080/"
+      url = "http://15729e2b-traefik:8080/"
 EOF
 
 traefik
