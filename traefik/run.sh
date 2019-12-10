@@ -7,11 +7,12 @@ TRAEFIK_DYNAMIC_CONF_PATH=/data/traefik.toml
 cat <<-EOF > $TRAEFIK_DYNAMIC_CONF_PATH
 [http.routers]
   [http.routers.traefik]
-    entryPoints = ["http"]
+    entryPoints = ["http", "https"]
     rule = "Host(\`traefik.kejadlen.dev\`)"
     # middlewares = ["redirect-https"]
     service = "traefik"
-    # [http.routers.traefik.tls]
+    [http.routers.traefik.tls]
+      certResolver = "le"
 
 [http.services]
   [http.services.traefik.loadBalancer]

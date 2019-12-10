@@ -14,5 +14,12 @@
 #   [http.middlewares.redirect-https.redirectScheme]
 #     scheme = "https"
 
+[certificatesResolvers.le.acme]
+  email = "alpha@kejadlen.dev"
+  storage = "/data/acme.json"
+  [certificatesResolvers.le.acme.httpChallenge]
+    # used during the challenge
+    entryPoint = "web"
+
 [api]
   insecure = true
