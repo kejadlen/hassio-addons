@@ -1,8 +1,8 @@
-#!/usr/bin/env bashio
-set +u
+#!/usr/bin/env sh
+set -e
 
 CONFIG_PATH=/data/options.json
 
 traefik
 
-# vim: ft=bash
+# vim: ft=sh
