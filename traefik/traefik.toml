@@ -3,5 +3,16 @@
     filename = "/data/traefik.toml"
     watch = true
 
+[entryPoints]
+  [entryPoints.http]
+    address = ":80"
+
+  # [entryPoints.https]
+  #   address = ":443"
+
+# [http.middlewares]
+#   [http.middlewares.redirect-https.redirectScheme]
+#     scheme = "https"
+
 [api]
   insecure = true
