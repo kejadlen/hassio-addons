@@ -8,7 +8,7 @@ cat <<-EOF > $TRAEFIK_DYNAMIC_CONF_PATH
 [http.routers]
   [http.routers.traefik]
     entryPoints = ["http"]
-    rule = "Host(`traefik.kejadlen.dev`)"
+    rule = "Host(\`traefik.kejadlen.dev\`)"
     # middlewares = ["redirect-https"]
     service = "traefik"
     # [http.routers.traefik.tls]
