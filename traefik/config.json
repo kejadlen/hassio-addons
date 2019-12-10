@@ -1,6 +1,6 @@
 {
   "name": "traefik",
-  "version": "0.4",
+  "version": "0.5",
   "slug": "traefik",
   "description": "",
   "arch": ["armhf"],
@@ -11,7 +11,6 @@
     "80/tcp": 80,
     "8080/tcp": 8080
   },
-  "docker_api": true,
   "options": {},
   "schema": {}
 }

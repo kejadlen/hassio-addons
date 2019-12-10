@@ -3,4 +3,9 @@ FROM $BUILD_FROM
 
 FROM traefik:v2.0
 
-CMD ["--api.insecure=true", "--providers.docker"]
+COPY traefik.toml /etc/traefik.toml
+
+COPY run.sh /
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]

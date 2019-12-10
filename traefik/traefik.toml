@@ -1,0 +1,7 @@
+[providers]
+  [providers.file]
+    filename = "/data/traefik.toml"
+    watch = true
+
+[api]
+  insecure = true
