@@ -1,6 +1,6 @@
 {
   "name": "traefik",
-  "version": "0.12",
+  "version": "0.13",
   "slug": "traefik",
   "description": "",
   "arch": ["armhf"],
