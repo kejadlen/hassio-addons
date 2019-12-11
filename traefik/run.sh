@@ -4,20 +4,15 @@ set -e
 CONFIG_PATH=/data/options.json
 TRAEFIK_DYNAMIC_CONF_PATH=/data/traefik.toml
 
+routers=`jq --raw-output --from-file routers.jq < $CONFIG_PATH`
+services=`jq --raw-output --from-file services.jq < $CONFIG_PATH`
+
 cat <<-EOF > $TRAEFIK_DYNAMIC_CONF_PATH
 [http.routers]
-  [http.routers.traefik]
-    entryPoints = ["http", "https"]
-    rule = "Host(\`traefik.kejadlen.dev\`)"
-    # middlewares = ["redirect-https"]
-    service = "traefik"
-    [http.routers.traefik.tls]
-      certResolver = "le"
+$routers
 
 [http.services]
-  [http.services.traefik.loadBalancer]
-    [[http.services.traefik.loadBalancer.servers]]
-      url = "http://15729e2b-traefik:8080/"
+$services
 EOF
 
 traefik
