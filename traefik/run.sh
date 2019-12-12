@@ -1,5 +1,5 @@
-#!/usr/bin/env sh
-set -e
+#!/usr/bin/env bashio
+set +u
 
 CONFIG_PATH=/data/options.json
 TRAEFIK_DYNAMIC_CONF_PATH=/data/traefik.toml
@@ -15,6 +15,6 @@ $routers
 $services
 EOF
 
-traefik
+./traefik
 
-# vim: ft=sh
+# vim: ft=bash
