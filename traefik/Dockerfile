@@ -1,10 +1,10 @@
 ARG BUILD_FROM
-FROM $BUILD_FROM
 
 FROM traefik:v2.0
 
-RUN apk update && apk upgrade && \
-    apk add jq
+FROM $BUILD_FROM
+
+COPY --from=0 /usr/local/bin/traefik .
 
 COPY traefik.toml /etc/traefik/traefik.toml
 

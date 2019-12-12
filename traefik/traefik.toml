@@ -1,6 +1,6 @@
 [providers]
   [providers.file]
-    filename = "/data/traefik.toml"
+    directory = "/data"
     watch = true
 
 [entryPoints]
