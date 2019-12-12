@@ -17,10 +17,12 @@
     ],
     "services": [
       { "name": "traefik", "url": "http://d00d1e_traefik:8888" }
-    ]
+    ],
+    "logLevel": "WARN"
   },
   "schema": {
     "routers": [{ "name": "str", "host": "str", "service": "str" }],
-    "services": [{ "name": "str", "url": "url" }]
+    "services": [{ "name": "str", "url": "url" }],
+    "logLevel": "str"
   }
 }

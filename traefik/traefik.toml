@@ -1,6 +1,3 @@
-[log]
-  level = "DEBUG"
-
 [providers]
   [providers.file]
     directory = "/data"
