@@ -8,7 +8,7 @@ mkdir -p $TRAEFIK_CONF_DIR
 
 addons=$(bashio::config "addons")
 
-bashio::log.info $(function bashio::addon.webui "traefik")
+bashio::log.info $(bashio::addon.webui "traefik")
 
 bashio::log.info "${addons}"
 
