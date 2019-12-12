@@ -23,6 +23,6 @@
   "schema": {
     "routers": [{ "name": "str", "host": "str", "service": "str" }],
     "services": [{ "name": "str", "url": "url" }],
-    "logLevel": "str"
+    "logLevel": "str?"
   }
 }
