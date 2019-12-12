@@ -1,4 +1,3 @@
-# FROM armhf/alpine
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
