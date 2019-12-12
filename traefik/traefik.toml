@@ -3,7 +3,7 @@
 
 [providers]
   [providers.file]
-    directory = "/data"
+    filename = "/data/traefik.toml"
     watch = true
 
 [entryPoints]
