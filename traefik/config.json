@@ -13,8 +13,7 @@
   },
   "options": {
     "addons": [
-      "name": "traefik",
-      "host": "traefik.example.com"
+      { "name": "traefik", "host": "traefik.example.com" }
     ]
   },
   "schema": {
