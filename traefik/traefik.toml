@@ -22,7 +22,7 @@
   storage = "/data/acme.json"
   [certificatesResolvers.le.acme.httpChallenge]
     # used during the challenge
-    entryPoint = "web"
+    entryPoint = "http"
 
 [api]
   insecure = true
