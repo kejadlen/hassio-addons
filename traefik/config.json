@@ -12,11 +12,15 @@
     "8080/tcp": 8080
   },
   "options": {
-    "addons": [
-      { "name": "traefik", "host": "traefik.example.com" }
+    "routers": [
+      { "name": "traefik", "host": "traefik.example.com", "service": "traefik" }
+    ],
+    "services": [
+      { "name": "traefik", "url": "http://d00d1e_traefik:8888" }
     ]
   },
   "schema": {
-    "addons": [{ "name": "str", "host": "str" }]
+    "routers": [{ "name": "str", "host": "str", "service": "str" }],
+    "services": [{ "name": "str", "url": "url" }]
   }
 }

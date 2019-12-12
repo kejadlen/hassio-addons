@@ -1,25 +1,20 @@
-#!/usr/bin/env bashio
+#!/usr/bin/env sh
+set -e
 
-# CONFIG_PATH=/data/options.json
-# TRAEFIK_DYNAMIC_CONF_PATH=/data/traefik.toml
-TRAEFIK_CONF_DIR=/data/traefik
+CONFIG_PATH=/data/options.json
+TRAEFIK_DYNAMIC_CONF_PATH=/data/traefik.toml
 
-mkdir -p $TRAEFIK_CONF_DIR
+routers=`jq --raw-output --from-file routers.jq < $CONFIG_PATH`
+services=`jq --raw-output --from-file services.jq < $CONFIG_PATH`
 
-addons=$(bashio::config "addons")
+cat <<-EOF > $TRAEFIK_DYNAMIC_CONF_PATH
+[http.routers]
+$routers
 
-bashio::log.info $(bashio::addon.webui "traefik")
+[http.services]
+$services
+EOF
 
-bashio::log.info "${addons}"
+traefik
 
-# cat <<-EOF > $TRAEFIK_DYNAMIC_CONF_PATH
-# [http.routers]
-# $routers
-
-# [http.services]
-# $services
-# EOF
-
-# ./traefik
-
-# vim: ft=bash
+# vim: ft=sh
