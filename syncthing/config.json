@@ -1,0 +1,14 @@
+{
+    "name": "syncthing",
+    "version": "0.1",
+    "slug": "syncthing",
+    "description": "",
+    "arch": ["armhf"],
+    "startup": "application",
+    "webui": "http://[HOST]:[PORT:8384]",
+    "boot": "auto",
+    "ports": {"8384/tcp": 8384, "22000/tcp": null, "21027/udp": 21027},
+    "map": ["share:rw", "config:rw", "backup:rw", "addons:rw"],
+    "options": {},
+    "schema": {}
+}
